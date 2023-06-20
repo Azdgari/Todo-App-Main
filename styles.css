@@ -1,0 +1,57 @@
+:root {
+  /* Primary */
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: hsl(192, 100%, 67%);
+
+/* Dark Theme */
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue-alt: hsl(237, 14%, 26%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 375px;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.header-container {
+  background-image: url(images/bg-desktop-dark.jpg);
+  display: flex;
+  flex-direction: column;
+}
+
+.header-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.heading {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+}
+
+.create-new {
+  background-color: var(--very-dark-desaturated-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  color: var(--dark-grayish-blue)
+}

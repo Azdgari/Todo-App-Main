@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles.css" class="stylesheet">
+
   <title>Frontend Mentor | Todo app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <div class="header-container">
+    <div class="header-items">
+      <h1 class="heading">Todo</h1>
+      <div class="light-dark-toggle">
+        <img src="./images/icon-sun.svg" alt="">
+      </div>
+    </div>
+    <div class="create-new">
+      Create a new todo...
+    </div>
+  </div>
+  </div>
+  <div class="list-container">
+    <ul>
+      <li class="list-item">Item 1</li>
+      <li class="list-item">Item 2</li>
+      <li class="list-item">Item 3</li>
+    </ul>
+  </div>
+  <div class="footer-container">
+    <div class="item-states">
+      <div class="state">All</div>
+      <div class="state">Active</div>
+      <div class="state">Completed</div>
+    </div>
+    <div class="footer-text">Drag and drop to reorder list</div>
+  </div>
 
   Todo
 
   <!-- Add dynamic number --> items left
 
   All
-  Active 
+  Active
   Completed
 
   Clear Completed
 
-  Drag and drop to reorder list
+
 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
