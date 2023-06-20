@@ -31,6 +31,11 @@ body {
   flex-direction: column;
 }
 
+.background-container {
+  background-color: var(--very-dark-blue);
+  padding: 2rem 0;
+}
+
 .header-items {
   display: flex;
   justify-content: space-between;
@@ -44,7 +49,9 @@ body {
   letter-spacing: 0.7rem;
 }
 
-.create-new {
+#create-new {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--very-dark-desaturated-blue);
   font-weight: 700;
   font-size: 0.8rem;
@@ -55,3 +62,76 @@ body {
   border-radius: 5px;
   color: var(--dark-grayish-blue)
 }
+
+#new-todo-input {
+  background-color: var(--very-dark-desaturated-blue);
+  border: none;
+  color: var(--light-grayish-blue);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  border-radius: 5px;
+}
+
+#new-todo-submit {
+  background-color: var(--light-grayish-blue);
+  border: none;
+  color: var(--very-dark-desaturated-blue);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.list {
+  background-color: var(--very-dark-desaturated-blue);
+  border-radius: 10px;
+  margin: 0 1.5rem;
+  border: 1px solid var(--very-dark-grayish-blue-alt);
+  padding: 0.2rem 0; /*bad solution to border radius problem, fix later*/
+}
+
+.list-item {
+  background-color: var(--very-dark-desaturated-blue);
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item-content {
+  color: var(--light-grayish-blue)
+}
+
+#remove-item {
+  background-color: var(--very-dark-desaturated-blue);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.item-states {
+  display: flex;
+  justify-content: space-around;
+  color: var(--dark-grayish-blue);
+  background-color: var(--very-dark-desaturated-blue);
+  border-radius: 10px;
+  border: 1px solid var(--very-dark-grayish-blue-alt);
+  padding: 1rem 1rem;
+}
+
+.footer-text {
+  color: var(--dark-grayish-blue);
+  font-size: 0.8rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+

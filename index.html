@@ -32,36 +32,43 @@
         <img src="./images/icon-sun.svg" alt="">
       </div>
     </div>
-    <div class="create-new">
-      Create a new todo...
+    <form id="create-new">
+      <input type="text" id="new-todo-input" placeholder="Create a new todo...">
+      <input type="submit" id="new-todo-submit" value="Add">
+    </form>
+  </div>
+  </div>
+  <div class="background-container">
+    <div class="list-container">
+      <ul class="list">
+        <li class="list-item">
+          <input type="checkbox">
+          <div class="list-item-content">Item 1</div>
+          <button id="remove-item"><img src="./images/icon-cross.svg" alt=""></button>
+        </li>
+        <li class="list-item">
+          <input type="checkbox">
+          <div class="list-item-content">Item 2</div>
+          <button id="remove-item"><img src="./images/icon-cross.svg" alt=""></button>
+        </li>
+        <li class="list-item">
+          <input type="checkbox" src="./images/icon-check.svg">
+          <div class="list-item-content">Item 3</div>
+          <button id="remove-item"><img src="./images/icon-cross.svg" alt=""></button>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-container">
+      <div class="item-states">
+        <div class="state">All</div>
+        <div class="state">Active</div>
+        <div class="state">Completed</div>
+      </div>
+      <div class="footer-text">Drag and drop to reorder list</div>
     </div>
   </div>
-  </div>
-  <div class="list-container">
-    <ul>
-      <li class="list-item">Item 1</li>
-      <li class="list-item">Item 2</li>
-      <li class="list-item">Item 3</li>
-    </ul>
-  </div>
-  <div class="footer-container">
-    <div class="item-states">
-      <div class="state">All</div>
-      <div class="state">Active</div>
-      <div class="state">Completed</div>
-    </div>
-    <div class="footer-text">Drag and drop to reorder list</div>
-  </div>
 
-  Todo
 
-  <!-- Add dynamic number --> items left
-
-  All
-  Active
-  Completed
-
-  Clear Completed
 
 
 
