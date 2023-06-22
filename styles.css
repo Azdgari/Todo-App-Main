@@ -88,9 +88,10 @@ body {
   cursor: pointer;
 }
 
+
 .list {
   background-color: var(--very-dark-desaturated-blue);
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
   margin: 0 1.5rem;
   border: 1px solid var(--very-dark-grayish-blue-alt);
   padding: 0.2rem 0; /*bad solution to border radius problem, fix later*/
@@ -103,6 +104,19 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--very-dark-grayish-blue-alt);
+}
+
+.task-and-clear-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--very-dark-desaturated-blue);
+  border-radius: 0px 0px 10px 10px;
+  margin: 0 1.5rem;
+  border: 1px solid var(--very-dark-grayish-blue-alt);
+  padding: 1rem 1rem;
+  color: var(--dark-grayish-blue);
+
 }
 
 [type="checkbox"] {

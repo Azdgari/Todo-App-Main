@@ -4,6 +4,7 @@ const newTodoForm = document.querySelector('[data-new-todo-form]');
 const newTodo = document.getElementById('new-todo');
 const submitForm = document.querySelector('[data-new-todo-input]');
 const form = document.getElementById('create-new');
+const taskCount = document.querySelector('[data-tasks-count]');
 
 let LOCAL_STORAGE_KEY = 'todo.listItems';
 let listItems = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
@@ -15,6 +16,11 @@ function save() {
 function saveAndRender() {
   save();
   render();
+}
+
+function renderTaskCount() {
+  const count = listItems.filter((item) => !item.checked).length;
+  taskCount.textContent = `${count} items left`;
 }
 
 function addNewTodo() {
@@ -49,10 +55,12 @@ function toggleCheckBox(id) {
     item.checked = !item.checked;
     save();
   }
+  renderTaskCount();
 }
 
 function removeItem(id) {
   listItems = listItems.filter((item) => item.id !== id);
+  renderTaskCount();
   saveAndRender();
 }
 
@@ -86,6 +94,7 @@ function render() {
     listElement.appendChild(checkBox);
     listElement.appendChild(label);
     listElement.appendChild(removeBtn);
+    renderTaskCount();
   });
 }
 
