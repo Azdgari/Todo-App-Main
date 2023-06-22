@@ -5,6 +5,7 @@ const newTodo = document.getElementById('new-todo');
 const submitForm = document.querySelector('[data-new-todo-input]');
 const form = document.getElementById('create-new');
 const taskCount = document.querySelector('[data-tasks-count]');
+const clearCompleted = document.querySelector('[data-clear-completed]');
 
 let LOCAL_STORAGE_KEY = 'todo.listItems';
 let listItems = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
@@ -58,6 +59,15 @@ function toggleCheckBox(id) {
   renderTaskCount();
 }
 
+function clearCompletedItems() {
+  listItems = listItems.filter((item) => !item.checked);
+}
+
+clearCompleted.addEventListener('click', () => {
+  clearCompletedItems();
+  render();
+});
+
 function removeItem(id) {
   listItems = listItems.filter((item) => item.id !== id);
   renderTaskCount();
@@ -94,8 +104,8 @@ function render() {
     listElement.appendChild(checkBox);
     listElement.appendChild(label);
     listElement.appendChild(removeBtn);
-    renderTaskCount();
   });
+  renderTaskCount();
 }
 
 render();
