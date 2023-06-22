@@ -8,6 +8,10 @@ const form = document.getElementById('create-new');
 const todos = [];
 
 function addNewTodo() {
+  const inputValue = newTodo.value;
+  if (inputValue === '') {
+    return;
+  }
   return (item = {
     id: todos.length + 1,
     name: newTodo.value,
