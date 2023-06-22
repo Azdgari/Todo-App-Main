@@ -54,6 +54,12 @@ function toggleCheckBox(id) {
   const item = listItems.find((item) => item.id === id);
   if (item) {
     item.checked = !item.checked;
+    const listElement = document.querySelector(`[data-id='${id}']`);
+    if (item.checked) {
+      listElement.classList.add('completed');
+    } else {
+      listElement.classList.remove('completed');
+    }
     save();
   }
   renderTaskCount();
@@ -85,6 +91,9 @@ function render() {
     checkBox.id = `task-${item.id}`;
     checkBox.checked = item.checked;
     checkBox.addEventListener('click', () => toggleCheckBox(item.id));
+    if (checkBox.checked) {
+      listElement.classList.add('.completed');
+    }
     const label = document.createElement('label');
     label.htmlFor = `task-${item.id}`;
     label.classList.add('list-item-content');

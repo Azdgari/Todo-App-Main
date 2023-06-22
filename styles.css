@@ -144,6 +144,11 @@ body {
   vertical-align: middle;
 }
 
+.completed .list-item-content {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
 .list-item-content {
   color: var(--light-grayish-blue);
   cursor: pointer;
