@@ -17,26 +17,24 @@ function saveAndRender() {
   render();
 }
 
-let todos = [];
-
 function addNewTodo() {
   const inputValue = newTodo.value;
   if (inputValue === '') {
     return;
   }
-  return (item = {
-    id: todos.length + 1,
+  const item = {
+    id: listItems.length + 1,
     name: newTodo.value,
-  });
+    checked: false,
+  };
+  listItems.push(item);
+  newTodo.value = '';
+  saveAndRender();
 }
 
 newTodoForm.addEventListener('submit', (e) => {
   e.preventDefault();
   addNewTodo();
-  todos.push(item);
-  render();
-  newTodo.value = '';
-  saveAndRender();
 });
 
 function clearElement(element) {
@@ -45,20 +43,30 @@ function clearElement(element) {
   }
 }
 
+function toggleCheckBox(id) {
+  const item = listItems.find((item) => item.id === id);
+  if (item) {
+    item.checked = !item.checked;
+    save();
+  }
+}
+
 function removeItem(id) {
-  todos = todos.filter((item) => item.id !== id);
-  render();
+  listItems = listItems.filter((item) => item.id !== id);
+  saveAndRender();
 }
 
 function render() {
   clearElement(list);
-  todos.forEach((item) => {
+  listItems.forEach((item) => {
     const listElement = document.createElement('li');
     listElement.dataset.id = item.id;
     listElement.classList.add('list-item');
     const checkBox = document.createElement('input');
     checkBox.type = 'checkbox';
     checkBox.id = `task-${item.id}`;
+    checkBox.checked = item.checked;
+    checkBox.addEventListener('click', () => toggleCheckBox(item.id));
     const label = document.createElement('label');
     label.htmlFor = `task-${item.id}`;
     label.classList.add('list-item-content');
