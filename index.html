@@ -32,16 +32,19 @@
         <img src="./images/icon-sun.svg" alt="">
       </div>
     </div>
-    <form action="" id="create-new" data-new-todo-form>
-      <input type="text" id="new-todo" placeholder="Create a new todo..." aria-label="Create a new todo..."
-        data-new-todo-input>
+    <form action="" id="create-new" class="horizontal-box" data-new-todo-form>
+      <div class="check-box-and-input">
+        <div class="custom-checkbox"></div>
+        <input type="text" id="new-todo" placeholder="Create a new todo..." aria-label="Create a new todo..."
+          data-new-todo-input>
+      </div>
       <button type="submit" id="submit-btn" aria-label="Create todo button">Add</button>
     </form>
   </div>
   </div>
   <div class="background-container">
     <div class="list-container">
-      <ul class="list" data-list>
+      <ul class="list" class="horizontal-box" data-list>
       </ul>
       <div class="task-and-clear-container">
         <div class="tasks-remaining" data-tasks-count>5 tasks remaining</div>
@@ -49,7 +52,7 @@
       </div>
     </div>
     <div class="footer-container">
-      <div class="item-states">
+      <div class="item-states" class="horizontal-box">
         <div class="state">All</div>
         <div class="state">Active</div>
         <div class="state">Completed</div>
